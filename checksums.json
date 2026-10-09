@@ -1,0 +1,30 @@
+[
+  {
+    "game": "DDS1_USA",
+    "patch": "DDS1_USA.xdelta",
+    "apply_script": "Apply_DDS1_USA.cmd",
+    "source_filename": "Shin Megami Tensei - Digital Devil Saga (USA).iso",
+    "executable": "SLUS_209.74",
+    "iso_bytes": 4539547648,
+    "source_iso_sha256": "7dd1f68190ab989f9ff53ee3fe061f6832628c5c4a987a94960ed32921d37843",
+    "output_iso_sha256": "e2cb5ac25d9184a1206dbe371d321e17aa8b0025c8634f9f08bed5da3ffe961f",
+    "patch_bytes": 16398,
+    "patch_sha256": "ac6da4cf9b21fd1708ac0634d0933d553f4360d98c7e74173c78b43b8cba4246",
+    "full_decode_matches_delivered_iso": true,
+    "gameplay_verified": false
+  },
+  {
+    "game": "DDS2_USA",
+    "patch": "DDS2_USA.xdelta",
+    "apply_script": "Apply_DDS2_USA.cmd",
+    "source_filename": "Shin Megami Tensei - Digital Devil Saga 2 (USA).iso",
+    "executable": "SLUS_211.52",
+    "iso_bytes": 4677500928,
+    "source_iso_sha256": "ecb1ac6164ca6f9cfe55f140de9873378aeea26c11224ddb95fdb34cdd3fa760",
+    "output_iso_sha256": "1dc86f761c95704701803f26c34db8540f86547d07f01e60d36a50ca0efe1d9f",
+    "patch_bytes": 16882,
+    "patch_sha256": "ff91407f910c47f122ae8053ce197b95e4a23f4051808c0909f0a513c2fa4418",
+    "full_decode_matches_delivered_iso": true,
+    "gameplay_verified": false
+  }
+]

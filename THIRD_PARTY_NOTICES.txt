@@ -1,0 +1,8 @@
+The bundled xdelta3.exe is an unmodified official Windows x86_64 Xdelta release.
+Source: https://github.com/jmacd/xdelta/releases/tag/v3.2.0
+Official download archive SHA-256: 8aca331c3d49ec4465ee8f3f7e3afb92e06d36e32fdec422c3252aaa813a7d2a
+Xdelta: Copyright Joshua MacDonald; Apache License.
+The executable statically links BLAKE3 and liblzma.
+Upstream README and license texts are preserved in the licenses directory.
+BLAKE3: https://github.com/BLAKE3-team/BLAKE3
+liblzma / XZ Utils: https://tukaani.org/xz/
