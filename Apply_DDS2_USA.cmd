@@ -16,7 +16,7 @@ if /i not "%~x1"==".iso" (
   exit /b 1
 )
 set "dds_source=%~f1"
-set "dds_output=%~dpn1 [SELECT Camera].iso"
+set "dds_output=%~dpn1 [SELECT Camera Pitch].iso"
 if exist "%dds_output%" (
   echo Output already exists. No files were changed.
   echo "%dds_output%"

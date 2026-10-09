@@ -1,22 +1,27 @@
-# Digital Devil Saga — SELECT Camera Toggle
+# Digital Devil Saga — SELECT Camera and Limited Pitch
 
 First-person / third-person camera toggle patches for the **USA English PS2 releases** of *Shin Megami Tensei: Digital Devil Saga* and *Digital Devil Saga 2*.
 
 Author: **gymzatan**
 
-[Download the patch package](https://github.com/gymzatan/Digital-Devil-Saga-First-Person/releases/download/usa-camera/DDS_SELECT_USA_Patches.zip) · [Release notes](https://github.com/gymzatan/Digital-Devil-Saga-First-Person/releases/tag/usa-camera)
+[Project repository](https://github.com/gymzatan/Digital-Devil-Saga-First-Person)
+
+**Stable release.** Tested by gymzatan across many gameplay scenes. The 160-unit viewpoint was accepted, and vertical look was confirmed working in Digital Devil Saga (USA).
 
 ## Features
 
 - Press **SELECT** during normal field exploration to switch between first-person and third-person views. Press it again to switch back.
 - Available from the first playthrough; no cleared-game or New Game Plus requirement.
 - First-person mode hides the player model and places the view near the character's eye height.
+- In first-person mode, push the **right stick up/down** to look up/down. Pitch is limited to **60 degrees in each direction**, with a 4-degree step per camera update and a center dead zone. Releasing the stick retains the angle; SELECT resets pitch when switching views.
+- First-person base height is **160 game units**, raised by 20 units to improve the previously low viewpoint.
+- The original cancel-button horizontal recenter behavior is retained. It does not reset the added pitch; switching views with SELECT resets pitch to level.
 - Uses the game's existing camera, smoothing, collision and player-visibility routines.
 - Event and special cameras follow their original behavior. The selected view resumes when normal exploration returns.
 - Starts in third-person mode. The camera selection is not written into normal game saves.
 - Patches are embedded into the ISO; no PNACH file or emulator cheats are required.
 
-The design was inspired by the SELECT camera toggle in *Shin Megami Tensei III: Nocturne*.
+The SELECT design was inspired by *Shin Megami Tensei III: Nocturne*. Vertical-look input and limits use the HD remaster's ring-view camera parameters, adapted to DDS's original camera routines.
 
 ## Supported disc images
 
@@ -39,12 +44,13 @@ ecb1ac6164ca6f9cfe55f140de9873378aeea26c11224ddb95fdb34cdd3fa760
 
 ## Apply the patch on Windows
 
-1. Download `DDS_SELECT_USA_Patches.zip` from the release and **extract the entire archive**. Keep the launchers, `patches` and `tools` folders together.
-2. Prepare the matching original USA ISO. An archive or CHD must first be converted or extracted into the correct ISO; renaming its extension does not convert it.
+1. **Extract the entire `DDS_SELECT_USA_Pitch_Patches.zip` archive**. Keep the launchers, `patches` and `tools` folders together.
+2. Prepare the matching original USA ISO. Apply this patch to the original image, including when upgrading from a previous camera patch. An archive or CHD must first be converted or extracted into the correct ISO; renaming its extension does not convert it.
 3. Drag **one ISO** onto `Apply_DDS1_USA.cmd` or `Apply_DDS2_USA.cmd`, according to the game.
-4. Wait for **"Patch applied and verified successfully"**. The launcher creates an ISO next to the original with ` [SELECT Camera]` added to its filename. The original is preserved, and an existing output is not overwritten.
+4. Wait for **"Patch applied and verified successfully"**. The launcher creates an ISO next to the original with ` [SELECT Camera Pitch]` added to its filename. The original is preserved, and an existing output is not overwritten.
 5. In PCSX2, **cold boot the new ISO**, then load a normal save through the game's own load menu. **Do not start from an old emulator save state:** it restores the executable code captured before patching.
 6. Enter a normal field exploration scene and press the input mapped to the PS2 controller's **SELECT** button.
+7. In first-person mode, use **right-stick Y** to look up/down. Disable any older SELECT Camera cheat when using this ISO. Test pitch limits, releasing the stick, turning and moving, steps, walls, and returning from events or battles.
 
 The package includes the official self-contained **64-bit Windows Xdelta tool**. Python and emulator cheats are not needed. Allow at least 5 GB of free space beside the source ISO, on a filesystem that supports individual files larger than 4 GB. Processing a full disc image can take several minutes.
 
@@ -70,7 +76,7 @@ xdelta3 -d -s "original.iso" "patches/DDS1_USA.xdelta" "patched.iso"
 
 Both patches have been fully decoded and the resulting ISO SHA-256 values match the previously built and verified modified images. The Windows launchers were checked for wrong-source rejection and preservation of existing output files.
 
-**This is the stable release. Tested by gymzatan across many gameplay scenes.**
+**The SELECT toggle was tested by gymzatan across many gameplay scenes. The 160-unit height was accepted, and vertical look was confirmed working in Digital Devil Saga (USA).** Digital Devil Saga 2 uses the same verified camera implementation, without separate reported vertical-look gameplay acceptance. Both executables passed instruction, geometry and native camera integration checks. This does not imply a complete playthrough or coverage of every scene.
 
 When reporting an issue, include the game, emulator version, location, reproduction steps, and a screenshot or video if possible.
 
