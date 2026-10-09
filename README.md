@@ -70,7 +70,7 @@ xdelta3 -d -s "original.iso" "patches/DDS1_USA.xdelta" "patched.iso"
 
 Both patches have been fully decoded and the resulting ISO SHA-256 values match the previously built and verified modified images. The Windows launchers were checked for wrong-source rejection and preservation of existing output files.
 
-**This is a public test release. Actual game startup, camera rendering, movement and scene-transition compatibility still require gameplay testing.** File and instruction checks do not replace those tests.
+**This is the stable release. Gameplay testing has been completed by gymzatan.**
 
 When reporting an issue, include the game, emulator version, location, reproduction steps, and a screenshot or video if possible.
 
